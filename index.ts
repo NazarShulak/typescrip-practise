@@ -48,15 +48,15 @@ class Fish implements IAnimal {
     }
 }
 
-// let bird: IAnimal = new Bird()
-// bird.info()
-// let cat: IAnimal = new Cat()
-// cat.info()
-// let fish: IAnimal = new Fish()
-// fish.info()
+let bird: IAnimal = new Bird()
+bird.info()
+let cat: IAnimal = new Cat()
+cat.info()
+let fish: IAnimal = new Fish()
+fish.info()
 
 abstract class Shape {
-    abstract perimetr(): number
+    abstract perimeter(): number
 
     abstract area(): number
 
@@ -68,7 +68,7 @@ abstract class Shape {
 
 class Triangle extends Shape {
 
-    constructor(readonly a: number, readonly b: number, readonly c: number) {
+    constructor(private readonly a: number,private readonly b: number,private readonly c: number) {
         super();
         this.a = a
         this.b = b
@@ -80,14 +80,14 @@ class Triangle extends Shape {
         return Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))
     }
 
-    perimetr(): number {
+    perimeter(): number {
         return this.a + this.b + this.c;
     }
 
 }
 
 class Rectangle extends Shape {
-    constructor(readonly a: number, readonly b: number) {
+    constructor(private readonly a: number, private readonly b: number) {
         super();
         this.a = a
         this.b = b
@@ -97,7 +97,7 @@ class Rectangle extends Shape {
         return this.a * this.b;
     }
 
-    perimetr(): number {
+    perimeter(): number {
         return 2 * (this.a + this.b)
     }
 }
@@ -109,5 +109,5 @@ let shapes = [triangle, rectangle];
 
 shapes.forEach(value => {
     console.log(value.area())
-    console.log(value.perimetr())
+    console.log(value.perimeter())
 })
