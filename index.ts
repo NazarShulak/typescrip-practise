@@ -107,8 +107,7 @@ let rectangle = new Rectangle(6, 9);
 
 let shapes = [triangle, rectangle];
 
-shapes.forEach(value => {
-    console.log(value.area())
-    console.log(value.perimetr())
-
-})
+// shapes.forEach(value => {
+//     console.log(value.area())
+//     console.log(value.perimetr())
+// })
