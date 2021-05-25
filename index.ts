@@ -61,14 +61,14 @@ abstract class Shape {
     abstract area(): number
 
 
-    constructor() {
+    protected constructor() {
     }
 }
 
 
 class Triangle extends Shape {
 
-    constructor(private a: number, private b: number, private c: number) {
+    constructor(readonly a: number, readonly b: number, readonly c: number) {
         super();
         this.a = a
         this.b = b
