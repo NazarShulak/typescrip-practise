@@ -87,7 +87,7 @@ class Triangle extends Shape {
 }
 
 class Rectangle extends Shape {
-    constructor(private a: number, private b: number) {
+    constructor(readonly a: number, readonly b: number) {
         super();
         this.a = a
         this.b = b
@@ -107,7 +107,7 @@ let rectangle = new Rectangle(6, 9);
 
 let shapes = [triangle, rectangle];
 
-// shapes.forEach(value => {
-//     console.log(value.area())
-//     console.log(value.perimetr())
-// })
+shapes.forEach(value => {
+    console.log(value.area())
+    console.log(value.perimetr())
+})
